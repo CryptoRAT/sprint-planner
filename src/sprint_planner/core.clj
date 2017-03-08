@@ -19,11 +19,14 @@
 (s/def ::company-holiday-days-during-sprint ::valid-number-of-days-in-sprint)
 (s/def ::number-of-weeks-in-sprint ::valid-weeks-in-year)
 (s/def ::lost-work-days ::valid-number-of-days-in-sprint)
+; The percentage fo a sprint that is set aside for general employee activities.  Town halls,
+; organizational meetings, paperwork.
 (s/def ::time-for-non-sprint-work (s/double-in 0.0 1.0))
 (s/def ::sprint-hours ::non-negative-integer)
 ; The team should spend very little time in standup, but for our purposes the
 ; max is the same as the number of hours in a day.
 (s/def ::standup-hours (s/double-in 0.0 24.0))
+; percentage of time set aside for work that can not be planned.  Drivebys, support requests.
 (s/def ::unplanned-work-modifier (s/double-in 0.0 1.0))
 
 (s/def ::team-modifiers (s/keys :req [::company-holiday-days-during-sprint
@@ -45,7 +48,7 @@
                                    ::gross-availability]))
 
 (s/def ::time-for-sprint-work (s/keys :req [::hours
-                                   ::days]))
+                                            ::days]))
 
 
 (s/def ::team (s/coll-of ::team-member :kind list?))
@@ -151,11 +154,10 @@
     (let [hours (reduce + (map #(calculate-hours-for-developer % base-hours-per-dev) team))]
 
       (hash-map ::hours (format "%.2f" (double hours))
-           ::days (format "%.2f" (double (/ hours 8))))
+                ::days (format "%.2f" (double (/ hours 8))))
       )
 
     )
-
 
   )
 
@@ -167,7 +169,6 @@
           {::name "Amy" ::personal-vacation-days 0 ::gross-availability 1}
           {::name "Rory" ::personal-vacation-days 0 ::gross-availability 1}
           {::name "River" ::personal-vacation-days 0 ::gross-availability 0.2})))
-
 
 
 (comment

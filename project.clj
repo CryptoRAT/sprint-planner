@@ -1,8 +1,8 @@
-(defproject sprint-planner "sprint-planner-0.1.0"
+(defproject com.cryptorat/sprint-planner "0.1.0"
   :description "This project is meant to provide some commonly calculated values I use in sprint planning.  Simple right?"
-  :url "http://example.com/FIXME"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :url "https://github.com/CryptoRAT/sprint-planner"
+  :license {:name "MIT License"
+            :url "https://opensource.org/licenses/MITl"}
   :dependencies [[org.clojure/clojure "1.9.0-alpha14"]]
   :main ^:skip-aot sprint-planner.core
   :target-path "target/%s"
