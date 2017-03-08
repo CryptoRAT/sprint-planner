@@ -1,4 +1,4 @@
-# sprint-planning
+# sprint-planner
 
 A library of tools for a scrum-masters to use when planning a sprint. 
 
@@ -10,7 +10,7 @@ Clone this repo for now.  Then make the jar and import it to your project.
 
 (calculate-hours team-modifiers team)
 
-    $ java -jar sprint-planning-0.1.0-standalone.jar [args]
+    $ java -jar sprint-planner-0.1.0-standalone.jar [args]
 
 ## Options
 

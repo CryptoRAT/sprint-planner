@@ -1,7 +1,7 @@
-(ns sprint-planning.core-test
+(ns sprint-planner.core-test
   (:use midje.sweet)
   (:require [clojure.test :refer :all]
-            [sprint-planning.core :refer :all]
+            [sprint-planner.core :refer :all]
             [clojure.spec.test :as st]))
 
 

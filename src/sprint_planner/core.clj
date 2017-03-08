@@ -1,4 +1,4 @@
-(ns sprint-planning.core
+(ns sprint-planner.core
   (:require [clojure.test.check.generators]
             [clojure.spec :as s]
             [clojure.spec.test :as st]
