@@ -1,20 +1,29 @@
 # sprint-planner
 
-A library of tools for a scrum-masters to use when planning a sprint. 
+A library of tools for a scrum masters to use when planning a sprint. 
 
 ## Installation
 
-Clone this repo for now.  Then make the jar and import it to your project.
+### Leiningen/Boot
 
+```[com.cryptorat/sprint-planner "0.1.0"]```
+
+### Gradle
+
+```compile "com.cryptorat:sprint-planner:0.1.0"```
+
+### Maven
+```
+<dependency>
+  <groupId>com.cryptorat</groupId>
+  <artifactId>sprint-planner</artifactId>
+  <version>0.1.0</version>
+</dependency>
+```
 ## Usage
 
 (calculate-hours team-modifiers team)
 
-    $ java -jar sprint-planner-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
 
 ## Examples
 
